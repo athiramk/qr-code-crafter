@@ -2,7 +2,8 @@ import { useState } from "react";
 import VCardForm, { type VCardData } from "@/components/VCardForm";
 import QRPreview from "@/components/QRPreview";
 import QRCustomizer from "@/components/QRCustomizer";
-import { QrCode } from "lucide-react";
+import { Contact, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const emptyVCard: VCardData = {
   firstName: "",
