@@ -26,16 +26,20 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="py-8 text-center">
+        <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-4">
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
+        </Link>
         <div className="flex items-center justify-center gap-3 mb-2">
           <div className="p-3 rounded-2xl bg-primary/10">
-            <QrCode className="h-8 w-8 text-primary" />
+            <Contact className="h-8 w-8 text-primary" />
           </div>
           <h1 className="font-heading text-4xl font-extrabold text-foreground tracking-tight">
-            QR Card
+            Contact Card QR
           </h1>
         </div>
         <p className="text-muted-foreground font-medium max-w-md mx-auto">
-          Create beautiful vCard QR codes to share your contact info instantly
+          Create a vCard QR code to share your contact info instantly
         </p>
       </header>
 
