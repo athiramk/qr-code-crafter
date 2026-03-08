@@ -19,7 +19,7 @@ interface VCardFormProps {
   onChange: (data: VCardData) => void;
 }
 
-const fields = [
+const fields: { key: keyof VCardData; label: string; icon: typeof User; placeholder: string; type?: string }[] = [
   { key: "firstName", label: "First Name", icon: User, placeholder: "John" },
   { key: "lastName", label: "Last Name", icon: User, placeholder: "Doe" },
   { key: "phone", label: "Phone", icon: Phone, placeholder: "+1 234 567 890", type: "tel" },
@@ -28,7 +28,7 @@ const fields = [
   { key: "jobTitle", label: "Job Title", icon: Building2, placeholder: "Software Engineer" },
   { key: "website", label: "Website", icon: Globe, placeholder: "https://example.com", type: "url" },
   { key: "address", label: "Address", icon: MapPin, placeholder: "123 Main St, City" },
-] as const;
+];
 
 const VCardForm = ({ data, onChange }: VCardFormProps) => {
   const update = (key: string, value: string) => {
