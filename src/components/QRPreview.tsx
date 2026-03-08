@@ -67,12 +67,12 @@ const QRPreview = ({ data, fgColor, bgColor, size }: QRPreviewProps) => {
 
       {!hasData && (
         <div className="flex flex-col items-center gap-2 animate-pulse">
-          <p className="text-sm text-muted-foreground text-center max-w-[220px]">
+          <p className="text-sm text-muted-foreground text-center max-w-[220px] hidden lg:block">
             👈 Fill in your details on the left to generate a personalized QR code
           </p>
-          <svg className="h-6 w-6 text-primary rotate-180 lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
+          <p className="text-sm text-muted-foreground text-center max-w-[220px] lg:hidden">
+            ☝️ Fill in your details above to generate a personalized QR code
+          </p>
         </div>
       )}
 
