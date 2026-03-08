@@ -3,7 +3,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Index from "./pages/Index";
+import URLGenerator from "./pages/URLGenerator";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -15,7 +17,9 @@ const App = () => (
       <Sonner />
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Index />} />
+          <Route path="/url" element={<URLGenerator />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
